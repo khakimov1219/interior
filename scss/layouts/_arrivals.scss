@@ -1,0 +1,92 @@
+.arrivals {
+    padding-bottom: 82px;
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        color: #9A6437;
+        @include flex(row, start, center, 10);
+        margin-bottom: 21px;
+        @extend %before;
+        
+    }
+
+    .menu {
+        @include flex(row, space-between, center, 0);
+        margin-bottom: 34px;
+
+        h1 {
+            font-weight: 400;
+            font-size: 42px;
+            color: $pr-color;
+        }
+
+        ul {
+            @include flex(row, space-between, center, 0);
+
+            li.active a {
+                color: #fff;
+                background: $pr-color;
+            }
+
+            a {
+                padding: 10px 20px;
+                font-weight: 400;
+                font-size: 16px;
+                color: #353535;
+                user-select: none;
+                transition: .3s;
+                &:hover {
+                    color: #fff;
+                    background: $pr-color;
+                }
+            }
+        }
+    }
+
+    .prs {
+        @include flex(row, center, center, 30);
+        flex-wrap: wrap;
+
+        .pr {
+            width: calc((100% / 4) - (90px / 4));
+            margin-bottom: 9px;
+            .pr-img {
+                width: 100%;
+                height: 241px;
+                padding: 64px 76px 31px;
+                background: #F7F7F7;
+            }
+
+            .options {
+                width: 100%;
+                padding: 9px 84px;
+                background: $pr-color;
+                @include flex(row, center, center, 20)
+            }
+
+            .price {
+                h2 {
+                    margin-top: 6px;
+                    margin-bottom: 9px;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: #282828;
+                }
+
+                .more {
+                    @include flex(row, space-between, center, 0);
+                    h3 {
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 28px;
+                        span {
+                            color: #737373;
+                            text-decoration: line-through;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

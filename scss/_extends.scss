@@ -1,0 +1,53 @@
+%pr-btn {
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFF;
+    padding: 10px 17px;
+    position: relative;
+    min-width: 114px;
+    height: 37px;
+    display: inline-block;
+    border: 1px solid #000;
+    text-align: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        top: -9px;
+        left: -9px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+        bottom: -9px;
+        right: -9px;
+    }
+}
+
+%before {
+    &::before {
+        content: '';
+        display: block;
+        width: 55px;
+        height: 1px;
+        background: #9A6437;
+
+    }
+}
+%after{
+    &::after {
+        content: '';
+        display: block;
+        width: 55px;
+        height: 1px;
+    }
+}

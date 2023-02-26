@@ -1,0 +1,110 @@
+footer {
+    width: 100%;
+    min-height: 466px;
+    position: relative;
+    overflow: hidden;
+    padding: 88px 509px 78px 508px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12000px;
+        height: 12000px;
+        background: #DDD7D1;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .container {
+        @include flex(column, center, center, 0);
+        z-index: 2;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+
+        a {
+            img {
+                width: 62px;
+                height: 70px;
+            }
+
+            @include flex(row, center, center, 14);
+            font-weight: 400;
+            font-size: 35px;
+            align-items: center;
+            letter-spacing: 0.035em;
+
+            color: #555555;
+        }
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 46px;
+        color: #1B1A1A;
+        margin-bottom: 7px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        color: #5E5E5E;
+        margin-bottom: 17px;
+        width: 410px;
+        text-align: center;
+    }
+
+    form {
+        width: 412px;
+        height: 37px;
+        @include flex(row, space-between, center, 10);
+
+        input {
+            width: 275px;
+            height: 37px;
+            padding: 11px 123px 10px 13px;
+            border: 1px solid #5A5A5A;
+            border-radius: 4px;
+            background: transparent;
+
+            &::placeholder {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 28px;
+                color: #8E8E8E;
+            }
+        }
+
+        button {
+            width: 127px;
+            font-weight: 300;
+            height: 37px;
+            font-size: 12px;
+            color: #1B1A1A;
+            padding: 11px 29px 10px 30px;
+            background: transparent;
+            border: 1px solid #5A5A5A;
+            border-radius: 4px;
+        }
+    }
+
+    
+}
+.end {
+    width: 100%;
+    padding: 15px 0;
+    background: #fff;
+    position: relative;
+    ul{
+        @include flex(row, space-between, center, 21)
+    }
+    .container {
+        @include flex(row, space-between, center, 0)
+    }
+}
